@@ -9,6 +9,8 @@ while true do
   if char == "a" then
     shell.run("main")
   elseif char == "b" then
+    term.clear()
+    term.setCursorPos(1,1)
     break
   end
 end
