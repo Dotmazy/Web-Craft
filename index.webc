@@ -1,6 +1,12 @@
-<webc>
-  <title>test</title>
-  <h1>Title test h1</h1>
-  <p>paragraphe test</p>
-  <a href="183.42.246.8">test link</a>
-</webc>
+[
+  "test",
+  {
+    "type": "title",
+    "content": ["ttest1"]
+  },
+  {
+    "type": "link",
+    "params": {"href":"143.76.35.154"}
+    "content": ["teti"]
+  }
+]
