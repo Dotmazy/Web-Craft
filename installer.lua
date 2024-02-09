@@ -12,15 +12,16 @@ local function get(name, url)
   
   data = http.get(url)
   if data==nil then
-    print("File not found: "..url)
-    error()
+    printError("File not found: "..url)
+    return false
   end
   
   print("Downloading file '"..name.."' from "..url)
   makeFile(name,data.readAll())
+  return true
 end
 
-get("startup","startup.lua")
+if get("startup","startup.lua") then return end
 
 print("\nThe computer needs to be restarted in order to apply the changes.")
 print("(press any key to continue)")
