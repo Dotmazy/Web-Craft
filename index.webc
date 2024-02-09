@@ -3,10 +3,12 @@
   {
     "type": "title",
     "content": ["ttest1"]
+    "pos": [2,2]
   },
   {
     "type": "link",
     "params": {"href":"143.76.35.154"}
     "content": ["teti"]
+    "pos": [2,2]
   }
 ]
