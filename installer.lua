@@ -5,7 +5,7 @@ local function makeFile(path, text)
 end
 
 local function get(name, url)
-  url = "https://raw.githubusercontent.com/Dotmazy/Web-Craft/main/"..url
+  url = "https://raw.githubusercontent.com/Dotmazy/Web-Craft/main/"..url.."?v=1"
   if fs.exists(name) then
     fs.delete(name)
   end
