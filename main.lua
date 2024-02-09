@@ -41,5 +41,12 @@ while true do
     term.clear()
     term.setCursorPos(10,10)
     term.write("MOUSE "..button.." CLICK: "..x.." "..y)
+  elseif event == "mouse_scroll" then
+    local dir = p1
+    local x = p2
+    local y = p3
+    term.clear()
+    term.setCursorPos(10,10)
+    term.write("MOUSE "..dir.." SCROLL: "..x.." "..y)
   end
 end
