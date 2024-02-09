@@ -5,6 +5,7 @@ local function makeFile(path, text)
 end
 
 local function get(name, url)
+  url = "https://raw.githubusercontent.com/Dotmazy/Web-Craft/main/"..url
   if fs.exists(name) then
     fs.delete(name)
   end
@@ -14,7 +15,7 @@ local function get(name, url)
   makeFile(name,http.get(url).readAll())
 end
 
-get("version","https://raw.githubusercontent.com/Dotmazy/Web-Craft/main/index.webc")
+get("startup","startup.lua")
 
 print("\nThe computer needs to be restarted in order to apply the changes.")
 print("(press any key to continue)")
