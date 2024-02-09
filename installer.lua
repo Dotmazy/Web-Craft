@@ -22,6 +22,7 @@ local function get(name, url)
 end
 
 if not get("startup","startup.lua") then return end
+if not get("main","main.lua") then return end
 
 print("\nThe computer needs to be restarted in order to apply the changes.")
 print("(press any key to continue)")
