@@ -13,7 +13,7 @@ local function get(name, url)
   data = http.get(url)
   if data==nil then
     print("File not found: "..url)
-    exit()
+    error()
   end
   
   print("Downloading file '"..name.."' from "..url)
