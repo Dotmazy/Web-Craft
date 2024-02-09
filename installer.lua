@@ -9,10 +9,15 @@ local function get(name, url)
   if fs.exists(name) then
     fs.delete(name)
   end
-
+  
+  data = http.get(url)
+  if data==nil then
+    print("File not found: "..url)
+    os.exit()
+  end
+  
   print("Downloading file '"..name.."' from "..url)
-
-  makeFile(name,http.get(url).readAll())
+  makeFile(name,data.readAll())
 end
 
 get("startup","startup.lua")
