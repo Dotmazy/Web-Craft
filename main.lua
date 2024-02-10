@@ -1,7 +1,7 @@
 term.clear()
 term.setCursorPos(1,1)
 
-
+local pripheralVerif = os.startTimer(1)
 
 while true do
   event, p1, p2, p3, p4, p5 = os.pullEvent()
@@ -56,5 +56,10 @@ while true do
     term.clear()
     term.setCursorPos(10,10)
     term.write("MOUSE "..dir.." SCROLL: "..x.." "..y)
+  elseif event == "timer" then
+    local nb = p1
+    term.clear()
+    term.setCursorPos(10,10)
+    term.write("TIMER "..nb)
   end
 end
