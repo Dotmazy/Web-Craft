@@ -1,6 +1,8 @@
 term.clear()
 term.setCursorPos(1,1)
 
+
+
 while true do
   event, p1, p2, p3, p4, p5 = os.pullEvent()
   if event == "alarm" then
@@ -34,6 +36,12 @@ while true do
     term.clear()
     term.setCursorPos(10,10)
     term.write("MESSAGE RECEIVE: "..msg)
+  elseif event == "key" then
+    local key = p1
+    local isHeld = p2
+    term.clear()
+    term.setCursorPos(10,10)
+    term.write("KEY "..keys.getName(key).."; isHeld: "..isHeld)
   elseif event == "mouse_click" then
     local button = p1
     local x = p2
