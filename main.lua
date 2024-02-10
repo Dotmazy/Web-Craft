@@ -61,5 +61,8 @@ while true do
     term.clear()
     term.setCursorPos(10,10)
     term.write("TIMER "..nb)
+    if nb == pripheralVerif then
+      pripheralVerif = startTimer(1)
+    end
   end
 end
